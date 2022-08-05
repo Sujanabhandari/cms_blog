@@ -14,9 +14,8 @@ function App() {
   useEffect(() => {
     client.getEntries().then(function (entries) {
       console.log(entries);
-
-      const startTime = performance.now();
       setArticles(prev => [...prev, ...entries.items]);
+      // const startTime = performance.now();
       // entries.items.forEach(function (entry) {
       //   if (entry.fields) {
       //     console.log(entry.fields)
@@ -25,9 +24,8 @@ function App() {
       //     // console.log(entry.fields.productName);
       //   }
       // });
-      const endTime = performance.now();
-      console.log(endTime-startTime);
-
+      // const endTime = performance.now();
+      // console.log(endTime-startTime);
     });
   
   }, [])
