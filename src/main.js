@@ -1,5 +1,6 @@
-import * as contentful from 'contentful' 
+import * as contentful from 'contentful';
 
+// var contentful = require('contentful');
 export const client = contentful.createClient({
 
     space: process.env.REACT_APP_SPACE_ID,
