@@ -1,0 +1,76 @@
+/* Header */
+header {
+    font-family: Palatino, Georgia, 'Times New Roman', serif;
+    padding: 1.5em;
+    background: burlywood;
+}
+
+header > * {
+    margin: 0;
+}
+
+main {
+    display: block; 
+    margin: 4em auto;
+    max-width: 50em;
+}
+
+
+article {
+    display: var(--layout);
+    grid-row-gap: var(--spacing-default);
+    grid-template-columns: repeat(16, 1fr);
+}
+
+article > * {
+    grid-column: 4 / 12;
+    margin: 0;
+}
+
+article p + p {
+    margin: 0;
+}
+
+article .introduction {
+    font-size: 1.25rem;
+    display: var(--layout);
+    grid-row-gap: var(--spacing-default);
+    grid-column: 2 / span 8;
+    margin-bottom: var(--spacing-double);
+}
+
+.introduction > * {
+    margin: 0;
+}
+
+article > figure {
+    display: var(--layout);
+    grid-template-columns: repeat(16, 1fr);
+    grid-column: 1 / -1;
+    margin-bottom: var(--spacing-default);
+}
+body {
+    padding: 2rem 0rem;
+  }
+  
+  .card-img {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  
+  .card-title {
+    margin-bottom: 0.3rem;
+  }
+  
+  .cat {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .fa-users {
+    margin-left: 1rem;
+  }
+  
+  .card-footer {
+    font-size: 0.8rem;
+  }

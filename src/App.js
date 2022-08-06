@@ -6,6 +6,7 @@ import { client } from './main';
 import Nav from './Components/Nav';
 import { NavLink, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react';
+import '../src/styles/main.css'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     client.getEntries().then(function (entries) {
       console.log(entries);
       setArticles(prev => [...prev, ...entries.items]);
+
       // const startTime = performance.now();
       // entries.items.forEach(function (entry) {
       //   if (entry.fields) {
@@ -33,10 +35,15 @@ function App() {
   return (
     <div className="App">
 
-      <Nav />
+      <header>
+        <h1>Contentful Blog </h1>
+        <p>Welcome to our blog</p>
+      </header>
+      {/* <Nav /> */}
+      <main>
+        <Articles articles={articles}/>
+      </main>
       
-      <h1>Hello All </h1>
-      <Articles articles={articles}/>
       
 
       {/* <Routes>
