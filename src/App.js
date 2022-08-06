@@ -34,7 +34,6 @@ function App() {
 
   return (
     <div className="App">
-
       <header>
         <h1>Contentful Blog </h1>
         <p>Welcome to our blog</p>
@@ -45,7 +44,6 @@ function App() {
       </main>
       
       
-
       {/* <Routes>
         <Route path="articles" element={<Articles />} />
         <Route path="/article/:id" element={<Article />} />

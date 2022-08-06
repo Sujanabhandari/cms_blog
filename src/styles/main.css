@@ -7,51 +7,11 @@ header {
 
 header > * {
     margin: 0;
+    
 }
-
-main {
-    display: block; 
-    margin: 4em auto;
-    max-width: 50em;
-}
-
-
-article {
-    display: var(--layout);
-    grid-row-gap: var(--spacing-default);
-    grid-template-columns: repeat(16, 1fr);
-}
-
-article > * {
-    grid-column: 4 / 12;
-    margin: 0;
-}
-
-article p + p {
-    margin: 0;
-}
-
-article .introduction {
-    font-size: 1.25rem;
-    display: var(--layout);
-    grid-row-gap: var(--spacing-default);
-    grid-column: 2 / span 8;
-    margin-bottom: var(--spacing-double);
-}
-
-.introduction > * {
-    margin: 0;
-}
-
-article > figure {
-    display: var(--layout);
-    grid-template-columns: repeat(16, 1fr);
-    grid-column: 1 / -1;
-    margin-bottom: var(--spacing-default);
-}
-body {
-    padding: 2rem 0rem;
-  }
+/* body {
+    padding: 0rem 0rem;
+  } */
   
   .card-img {
     border-bottom-left-radius: 0px;
@@ -74,3 +34,12 @@ body {
   .card-footer {
     font-size: 0.8rem;
   }
+  .card-top{
+      /* width: 50vh; */
+      /* gap: 1; */
+  }
+  .card-img-top {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    }
