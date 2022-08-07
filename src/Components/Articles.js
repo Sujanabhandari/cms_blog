@@ -10,7 +10,7 @@ const Articles = ({ articles }) => {
                             <div className="card card-top hover-card m-0">
                                 <img className="card-img-top" src={article.fields.featuredImage.fields.file.url} alt="Bologna" />
 
-                                <div className="card-img-overlay">
+                                <div>
                                     <a href="#" className="btn btn-light btn-sm">{article.fields.blogtype}</a>
                                 </div>
 
@@ -18,7 +18,7 @@ const Articles = ({ articles }) => {
                                     <div className="row">
                                         <h4 className="card-title">{article.fields.name}</h4>
                                         <p className="card-text p-height">{article.fields.heading}</p>
-                                        <span classNameName="author card-link"><i>Written by </i><a href="#" className="text-decoration-none">{article.fields.author}</a></span> <br />
+                                        <span className="author card-link"><i>Written by </i><a href="#" className="text-decoration-none">{article.fields.author}</a></span> <br />
                                         <a href="#" className="btn btn-info mt-3">Read Blog</a>
                                        
                                     </div>
