@@ -34,10 +34,6 @@ header > * {
   .card-footer {
     font-size: 0.8rem;
   }
-  .card-top{
-      /* width: 50vh; */
-      /* gap: 1; */
-  }
   .card-img-top {
     width: 100%;
     height: 40vh;
@@ -51,4 +47,19 @@ header > * {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+.hover-div:hover {
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.32);
+  cursor: pointer;
+  border-radius: 1px;
+  border:none
+}
+
+.hover-card:hover {
+  cursor: pointer;
+  border:0;
 }

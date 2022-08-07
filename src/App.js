@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header className='mb-3'>
         <h1>Contentful Blog </h1>
         <p>Welcome to our blog</p>
       </header>
