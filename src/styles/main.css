@@ -43,3 +43,12 @@ header > * {
     height: 40vh;
     object-fit: cover;
     }
+
+.p-height{
+  line-height:1.2em;
+  height:3.6em;
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

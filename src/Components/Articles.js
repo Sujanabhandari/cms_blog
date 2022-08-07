@@ -1,5 +1,4 @@
 
-
 const Articles = ({ articles }) => {
     console.log("From component", articles)
     return (
@@ -7,20 +6,21 @@ const Articles = ({ articles }) => {
             <div className="container">
                 <div className="row">
                     {articles.map((article, index) =>
-                        <div className="col-4 d-flex align-items-stretch" key={index}>
+                        <div className="col-12 col-md-6 col-lg-4 d-flex align-items-stretch" key={index}>
                             <div className="card card-top m-3">
                                 <img className="card-img-top" src={article.fields.featuredImage.fields.file.url} alt="Bologna" />
-                                
+
                                 <div className="card-img-overlay">
                                     <a href="#" className="btn btn-light btn-sm">{article.fields.blogtype}</a>
                                 </div>
 
                                 <div className="card-body">
                                     <div className="row">
-                                            <h4 className="card-title">{article.fields.name}</h4>
-                                            <p className="card-text">{article.fields.heading}</p>
-                                            <span classNameName="author">Written by<a href="#">{article.fields.author}</a></span> <span classNameName="date">{article.fields.time}</span>
-                                            <a href="#" className="btn btn-info">Read Blog</a>
+                                        <h4 className="card-title">{article.fields.name}</h4>
+                                        <p className="card-text p-height">{article.fields.heading}</p>
+                                        <span classNameName="author card-link">Written by<a href="#">{article.fields.author}</a></span> <br />
+                                        <a href="#" className="btn btn-info mt-3">Read Blog</a>
+                                       
                                     </div>
                                 </div>
 
