@@ -14,20 +14,9 @@ function App() {
 
   useEffect(() => {
     client.getEntries().then(function (entries) {
-      console.log(entries);
-      setArticles(prev => [...prev, ...entries.items]);
-
-      // const startTime = performance.now();
-      // entries.items.forEach(function (entry) {
-      //   if (entry.fields) {
-      //     console.log(entry.fields)
-      //     setArticles(prev => [...prev, entry.fields]);
-      //     console.log(articles)
-      //     // console.log(entry.fields.productName);
-      //   }
-      // });
-      // const endTime = performance.now();
-      // console.log(endTime-startTime);
+      console.log("From useEffect",entries.items);
+      console.log(entries)
+      setArticles(entries.items);
     });
   
   }, [])
@@ -42,13 +31,6 @@ function App() {
       <main>
         <Articles articles={articles}/>
       </main>
-      
-      
-      {/* <Routes>
-        <Route path="articles" element={<Articles />} />
-        <Route path="/article/:id" element={<Article />} />
-        <Route path="/author/:id" element={<Article />} />
-      </Routes> */}
 
     </div>
   );
