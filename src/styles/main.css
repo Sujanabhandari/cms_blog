@@ -66,3 +66,7 @@ header > * {
   cursor: pointer;
   border:0;
 }
+
+.image {
+  max-width: 50%;
+}

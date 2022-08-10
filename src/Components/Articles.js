@@ -1,3 +1,4 @@
+import { useParams, Link, Outlet } from "react-router-dom";
 
 const Articles = ({ articles }) => {
     console.log("From component", articles)
@@ -9,7 +10,6 @@ const Articles = ({ articles }) => {
                         <div className="col-12 col-md-6 col-lg-4 hover-div b- mb-3" key={index}>
                             <div className="card card-top hover-card m-0">
                                 <img className="card-img-top" src={article.fields.featuredImage.fields.file.url} alt="Bologna" />
-
                                 <div>
                                     <a href="#" className="btn btn-light btn-sm">{article.fields.blogtype}</a>
                                 </div>
@@ -19,8 +19,7 @@ const Articles = ({ articles }) => {
                                         <h4 className="card-title">{article.fields.name}</h4>
                                         <p className="card-text p-height">{article.fields.heading}</p>
                                         <span className="author card-link"><i>Written by </i><a href="#" className="text-decoration-none">{article.fields.author}</a></span> <br />
-                                        <a href="#" className="btn btn-info mt-3">Read Blog</a>
-                                       
+                                        <Link to={article.sys.id} className="btn btn-info mt-3">Read Blog</Link>  
                                     </div>
                                 </div>
 
