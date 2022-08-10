@@ -14,8 +14,6 @@ function App() {
 
   useEffect(() => {
     client.getEntries().then(function (entries) {
-      console.log("From useEffect",entries.items);
-      console.log(entries)
       setArticles(entries.items);
     });
   
@@ -28,9 +26,10 @@ function App() {
         <p>Welcome to our blog</p>
       </header>
       {/* <Nav /> */}
-      <main>
-        <Articles articles={articles}/>
-      </main>
+      <Routes>
+        <Route path='/' element={<Articles articles={articles}/>} /> 
+        <Route path=':id' element={<Article articles={articles}/>} /> 
+      </Routes>
 
     </div>
   );
