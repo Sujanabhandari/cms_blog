@@ -1,15 +1,17 @@
 import Article from './Article';
 import Articles from './Articles';
+import Author from './Author';
 import { NavLink, Routes, Route } from "react-router-dom";
 // import Nav from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 
 const Nav = () => {
     return(
-        <Navbar >
-            {/* <NavLink to="/">Home</NavLink> */}
-            hi
-        </Navbar >
+        <nav> 
+            <NavLink to="Author/Sujana" className="link"> Sujana</NavLink>
+            <NavLink to="Author/Robert" className="link"> Robert</NavLink>
+            <NavLink to="Author/Christian" className="link"> Christian</NavLink>
+        </nav>
     )
 }
 export default Nav;

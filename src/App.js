@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import Article from './Components/Article';
 import Articles from './Components/Articles';
+import Author from './Components/Author';
 import './App.css';
 import { client } from './main';
 import Nav from './Components/Nav';
@@ -22,13 +23,17 @@ function App() {
   return (
     <div className="App">
       <header className='mb-3'>
-        <h1>Contentful Blog </h1>
+        <NavLink to="/" className="link"><h1>Contentful Blog</h1></NavLink>
         <p>Welcome to our blog</p>
+        <Nav />
       </header>
-      {/* <Nav /> */}
+
       <Routes>
         <Route path='/' element={<Articles articles={articles}/>} /> 
         <Route path=':id' element={<Article articles={articles}/>} /> 
+        <Route path='Author/Christian' element={<Author articles={articles} author='Christian'/>} /> 
+        <Route path='Author/Sujana' element={<Author articles={articles} author='Sujana Bhandari'/>} /> 
+        <Route path='Author/Robert' element={<Author articles={articles} author='Robert'/>} /> 
       </Routes>
 
     </div>
