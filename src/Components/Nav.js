@@ -1,11 +1,11 @@
-import Article from './Article';
-import Articles from './Articles';
-import Author from './Author';
 import { NavLink, Routes, Route } from "react-router-dom";
 // import Nav from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 
+
 const Nav = () => {
+
+
     return(
         <nav> 
             <NavLink to="Author/Sujana" className="link"> Sujana</NavLink>

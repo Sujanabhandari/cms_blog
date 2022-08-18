@@ -1,12 +1,12 @@
 import { useParams, Link, Outlet } from "react-router-dom";
 
 const Articles = ({ articles }) => {
-    console.log("From component", articles)
+    // console.log("From component", articles)
     return (
         <>
             <div className="container">
                 <div className="row">
-                    {articles.map((article, index) =>
+                    {articles?.map((article, index) =>
                         <div className="col-12 col-md-6 col-lg-4 hover-div b- mb-3" key={index}>
                             <div className="card card-top hover-card m-0">
                                 <img className="card-img-top" src={article.fields.featuredImage.fields.file.url} alt="Bologna" />
