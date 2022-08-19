@@ -1,19 +1,28 @@
+// import Articles from './Articles';
 import { useParams, Link, Outlet } from "react-router-dom";
+import { useState } from "react";
 
-const Articles = ({ articles }) => {
-    // console.log("From component", articles)
+const BlogTypes_Card = ({ articles }) => {
+    
+    const [blog, setBlog] = useState([]);
+   
+    const { type_name } = useParams();
+
+    const filteredArticles = articles?.filter((article) => article.fields.blogtype === type_name);
+    console.log(filteredArticles)
+
     return (
         <>
             <div className="container">
                 <div className="row">
-                    {articles?.map((article, index) =>
-                        <div className="col-12 col-md-6 col-lg-4 hover-div b- mb-3" key={index}>
+                    {filteredArticles?.map((article, index) =>
+                        <div className="col-6 hover-div b- mb-3" key={index}>
                             <div className="card card-top hover-card m-0">
-                                <img className="card-img-top" src={article.fields.featuredImage.fields.file.url} alt="Bologna" />
+                                <img className="card-img-top" src={article.fields.featuredImage.fields.file.url} alt="Bologna" />   
                                 <div>
-                                    <a href="#" className="btn btn-light btn-sm">{article.fields.blogtype}</a>
+                                    {/* <Link to={article.fields.blogtype} className="btn btn-light">{article.fields.blogtype}</Link> */}
+                                    <span>{article.fields.blogtype}</span>
                                 </div>
-
                                 <div className="card-body">
                                     <div className="row">
                                         <h4 className="card-title">{article.fields.name}</h4>
@@ -21,7 +30,7 @@ const Articles = ({ articles }) => {
                                         <span className="author card-link"><i>Written by </i>
                                             <Link to={article.fields.author} className="text-decoration-none">{article.fields.author}</Link>
                                         </span> <br />
-
+                                        
                                         <div>
                                             <Link to={`/articles/${article.sys.id}`} className="btn btn-info mt-3">Read Blog</Link>
                                         </div>
@@ -35,8 +44,10 @@ const Articles = ({ articles }) => {
                         </div>
                     )}
                 </div>
+                
             </div>
+            
         </>
     )
 }
-export default Articles;
+export default BlogTypes_Card;
